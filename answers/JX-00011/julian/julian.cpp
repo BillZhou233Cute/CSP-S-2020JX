@@ -1,0 +1,126 @@
+#include<iostream>
+#include<cstdio>
+#include<cstring>
+using namespace std;
+int n,m,c[1000010],d[4724],e[13],a,b,e1,f,g,h,x;
+int read(){
+	int s1=1,s2=0;
+	char ch=getchar();
+	while(!isdigit(ch)){
+		if(ch=='-')
+		s1=-1;
+		ch=getchar();
+	}
+	while(isdigit(ch)){
+		s2=s2*10+(ch-'0');
+		ch=getchar();
+	}
+	return s1*s2;
+}
+void prework(){
+	for(a=4713;a>0;a--){
+		if((a-1)%4==0)
+		d[a]=366;
+		else
+		d[a]=365;
+	}
+	for(a=1;a<=1580;a++){
+		if((a-1)%4==0)
+		c[a]=366;
+		else
+		c[a]=365;
+	}
+	for(a=1581;a<=1000010;a++){
+		if(a%4==0&&a%100!=0){
+			c[a]=366;
+			continue;
+		}
+		if(a%400==0){
+			c[a]=366;
+			continue;
+		}
+		c[a]=365;
+	}
+	c[1582]=355;
+	e[1]=31;
+	e[3]=31;
+	e[4]=30;
+	e[5]=31;
+	e[6]=30;
+	e[7]=31;
+	e[8]=31;
+	e[9]=30;
+	e[10]=31;
+	e[11]=30;
+	e[12]=31;
+}
+int main(){
+	freopen("julian.in","r",stdin);
+	freopen("julian.out","w",stdout);
+	n=read();
+	prework();
+	while(n>0){
+		n--;
+		m=read();
+		b=4713;
+		x=0;
+		while(m>=d[b]&&b>0){
+			m-=d[b];
+			b--;
+		}
+		if(m<366)
+		e1=1;
+		else{
+			e1=0;
+			x=1;
+		}
+		if(e1==0)
+		b=1;
+		while(m>c[b]){
+			m-=c[b];
+			b++;
+		}
+		if(b<=1582&&x==1)
+		e1=1;
+		if(e1==1&&(b-1)%4==0)
+		f=1;
+		if(e1==1&&(b-1)%4!=0)
+		f=0;
+		if(e1==0&&b%4==0&&b%100!=0)
+		f=1;
+		if(e1==0&&b%400==0)
+		f=1;
+		if(e1==0&&b%100==0&&b%400!=0)
+		f=0;
+		if(e1==1&&(b-1)%4!=0)
+		f=0;
+		if(f==1)
+		e[2]=29;
+		else
+		e[2]=28;
+		g=1;
+		while(m>=e[g]){
+			m-=e[g];
+			g++;
+		}
+		if(g>10&&b==1582&&x==1)
+		m+=10;
+		if(g==10&&m>4&&b==1582&&x==1)
+		m+=10;
+		if(m>=e[g]){
+			m-=e[g];
+			g++;
+		}
+		if(g>12){
+			g-=12;
+			b++;
+		}
+		if(x==0)
+		cout<<m+1<<" "<<g<<" "<<b<<" BC"<<endl;
+		else
+		cout<<m+1<<" "<<g<<" "<<b<<endl;
+	}
+	fclose(stdin);
+	fclose(stdout);
+	return 0;
+}

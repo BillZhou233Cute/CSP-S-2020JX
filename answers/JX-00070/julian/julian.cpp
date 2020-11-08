@@ -1,0 +1,118 @@
+#include<bits/stdc++.h>
+using namespace std;
+long long n,x,k=1,day,month,year;
+long long data1[13]={0,31,28,31,30,31,30,31,31,30,31,30,31},data2[13]={0,31,29,31,30,31,30,31,31,30,31,30,31};
+int main()
+{
+	freopen("julian.in","r",stdin);
+	freopen("julian.out","w",stdout);
+	cin>>n;
+	for(long long i=1;i<=n;i++)
+	{
+		cin>>x;
+		if(x<=366)
+		{
+			year=4713;
+			while(x-data2[k]>=0)
+			{
+				x=x-data2[k];
+				k++;
+			}
+			month=k;
+			day=x+1;
+			cout<<day<<" "<<month<<" "<<year<<" "<<"BC"<<endl;
+			k=1;
+		}
+		else
+		{
+			while(x>366&&k<4713)
+			{
+				if(((4713-k)-1)%4!=0)
+				x-=365;
+				else
+				x-=366;
+				k++;
+			}
+			year=4713-k+1;
+			k=1;
+			while(x>366)
+			{
+				if(k%4!=0)
+				x-=365;
+				else
+				x-=366;
+				k++;
+			}
+			if(k!=1)
+			year=1-k;
+			k=1;
+			if(year>0)
+			{
+				if((year-1)%4!=0)
+				while(x-data1[k]>=0)
+				{
+					x=x-data1[k];
+					k++;
+				}
+				else
+				while(x-data2[k]>=0)
+				{
+					x=x-data2[k];
+					k++;
+				}
+				month=k;
+				day=x;
+				cout<<day<<" "<<month<<" "<<year<<" "<<"BC"<<endl;
+				k=1;
+			}
+			else
+			{
+				year=abs(year);
+				if(year<1582)	
+				{
+					if(year%4!=0)
+					while(x-data1[k]>=0)
+					{
+						x=x-data1[k];
+						k++;
+					}
+					else
+					while(x-data2[k]>=0)
+					{
+						x=x-data2[k];
+						k++;
+					}
+					month=k;
+					day=x;
+				}
+				if(year>1582)
+				{
+					if((year%4==0&&year%100!=0)||year%400==0)
+					while(x-data2[k]>=0)
+					{
+						x=x-data2[k];
+						k++;
+					}
+					else
+					while(x-data1[k]>=0)
+					{
+						x=x-data1[k];
+						k++;
+					}
+					day=x;
+					month=k;
+					if(day+10<=data1[month])
+					day+=10;
+					else 
+					{
+						day=10+day-data1[month];
+						month+=1;
+					}
+				}
+				cout<<day<<" "<<month<<" "<<year<<endl;
+				k=1;
+			}
+		}
+	}
+	return 0;
+}

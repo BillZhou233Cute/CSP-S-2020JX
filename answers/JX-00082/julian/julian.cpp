@@ -1,0 +1,319 @@
+#include<iostream>
+#include<cstdio>
+#include<cstring>
+#include<cmath>
+using namespace std;
+int q,ansmo,ansri,ansnian,stnian,stmo,stri,kk;
+long long ti;
+int da1[12]={31,28,31,30,31,30,31,31,30,31,30,31};
+int da2[12]={31,29,31,30,31,30,31,31,30,31,30,31};
+int da3[12]={31,28,31,30,31,30,31,31,30,21,30,31};
+bool f;
+void find2(int sum,int nowmo,int nownian)//ruluoli
+{
+	if(nownian<0)
+	{
+	if((nownian+1)%4!=0)
+	{	
+		if(sum<da1[nowmo-1])
+		{
+			ansri=1+sum;ansmo=nowmo;ansnian=nownian;return;
+		}
+		else 
+		{
+			find2(sum-da1[nowmo-1],nowmo+1,nownian);
+		}
+	}
+	else
+	{
+		if(sum<da2[nowmo-1])
+		{
+			ansri=1+sum;ansmo=nowmo;ansnian=nownian;return;
+		}
+		else 
+		{
+			find2(sum-da2[nowmo-1],nowmo+1,nownian);
+		}
+	}
+	}
+	else
+	{
+		if(nownian%4!=0)
+	{	
+		if(sum<da1[nowmo-1])
+		{
+			ansri=1+sum;ansmo=nowmo;ansnian=nownian;return;
+		}
+		else 
+		{
+			find2(sum-da1[nowmo-1],nowmo+1,nownian);
+		}
+	}
+	else
+	{
+		if(sum<da2[nowmo-1])
+		{
+			ansri=1+sum;ansmo=nowmo;ansnian=nownian;return;
+		}
+		else 
+		{
+			find2(sum-da2[nowmo-1],nowmo+1,nownian);
+		}
+	}
+	}
+}
+void find3(int sum,int nowmo,int nownian)//ruluoli
+{
+	if(nownian%4!=0||(sum%100==0&&sum%400!=0))
+	{	
+		if(sum<da1[nowmo-1])
+		{
+			ansri=1+sum;ansmo=nowmo;ansnian=nownian;f=1;return;
+		}
+		else 
+		{
+			find3(sum-da1[nowmo-1],nowmo+1,nownian);
+		}
+	}
+	else
+	{
+		if(sum<da2[nowmo-1])
+		{
+			ansri=1+sum;ansmo=nowmo;ansnian=nownian;f=1;return;
+		}
+		else 
+		{
+			find3(sum-da2[nowmo-1],nowmo+1,nownian);
+		}
+	}
+}
+void find4(int sum,int nowmo,int nownian)//ruluoli
+{
+		if(sum<da3[nowmo-1])
+		{
+			if(nowmo==10)
+			{
+				if(1+sum>4)
+				{
+					ansri=15+sum-4;ansmo=10;ansnian=nownian;f=1;return;
+				}
+			}
+			else {ansri=1+sum;ansmo=nowmo;ansnian=nownian;f=1;return;}
+		}
+		else 
+		{
+			find4(sum-da3[nowmo-1],nowmo+1,nownian);
+		}
+}
+/*
+void find(int sum,int nownian)
+{
+	if(nownian+4<1582&&sum>=1461)
+	{
+		find(sum-1461,nownian+4);
+		return;
+	}
+	if(nownian>1582&&)
+	{
+		if(nownian%400==0||(nownian%4==0&&nownian%100!=0))
+		{
+			
+		}
+	}
+	if(nownian<1582&&sum<1461)
+	{
+		if(nownian%4==0)
+		{
+			if(sum<366)
+			{
+				find2(sum,1,nownian);
+				return;
+			}
+			else 
+		}
+		else
+		{
+			
+		}
+	}
+}*/
+void fnd(int sum,int nownian)
+{
+	if(sum<1721424&&nownian<0)
+	{
+		if((nownian+1)%4==0)
+		{
+			if(sum<366)
+			{
+				find2(sum,1,nownian);return;
+			}
+			else 
+			{
+				fnd(sum-366,nownian+1);return;
+			}
+		}
+		else
+		{
+			if(sum<365)
+			{
+				find2(sum,1,nownian);return;
+			}
+			else 
+			{
+				fnd(sum-365,nownian+1);return;
+			}
+		}
+	}
+	else 
+	{
+		if(kk==0){kk=1;fnd(sum-1721424,1);}
+		if(kk==1)
+		{
+			if(sum<577460)
+			{
+				if(nownian%4==0)
+				{
+					if(sum<366)
+					{
+						find2(sum,1,nownian);return;
+					}
+				else 
+				{
+					fnd(sum-366,nownian+1);return;
+				}
+			}
+			else
+			{
+				if(sum<365)
+				{
+					find2(sum,1,nownian);return;
+				}
+				else 
+				{
+					fnd(sum-365,nownian+1);return;
+				}
+			}
+			}
+			else {kk=2;fnd(sum-577460,1582);}
+		}
+		if(kk==2)
+		{
+			if(nownian==1582)
+			{
+				if(sum<355)
+				{
+					find4(sum,1,nownian);
+				}
+				else fnd(sum-355,nownian+1);
+			}
+			else
+			{
+				if(nownian%400==0||(nownian%4==0&&nownian%100!=0))
+				{
+					if(sum<366)
+					{
+						find3(sum,1,nownian);return;
+					}
+					else 
+					{
+						fnd(sum-366,nownian+1);return;
+					}
+				}
+				else
+				{
+					if(sum<365)
+					{
+						find3(sum,1,nownian);return;
+					}
+					else 
+					{
+						fnd(sum-365,nownian+1);return;
+					}
+				}
+			}
+		}
+	}
+	/*
+	if(nownian>1582)
+	{
+		if(nownian%400==0||(nownian%4==0&&nownian%100!=0))
+		{
+			if(sum<366)
+			{
+				find3(sum,1,nownian);return;
+			}
+			else 
+			{
+				fnd(sum-366,nownian+1);return;
+			}
+		}
+		else
+		{
+			if(sum<365)
+			{
+				find3(sum,1,nownian);return;
+			}
+			else 
+			{
+				fnd(sum-365,nownian+1);return;
+			}
+		}
+	}
+	
+	if(nownian<1582)
+	{
+		if(nownian==-1)
+		{
+			if(sum<366)
+			{
+				find2(sum,1,nownian);
+			}
+			else fnd(sum-366,nownian+2);
+		}
+		else
+		{
+			if((nownian+1)%4==0)
+		{
+			if(sum<366)
+			{
+				find2(sum,1,nownian);return;
+			}
+			else 
+			{
+				fnd(sum-366,nownian+1);return;
+			}
+		}
+		else
+		{
+			if(sum<365)
+			{
+				find2(sum,1,nownian);return;
+			}
+			else 
+			{
+				fnd(sum-365,nownian+1);return;
+			}
+		}
+		}
+	}
+	*/
+}
+int main()
+{
+	freopen("julian.in","r",stdin);
+	freopen("julian.out","w",stdout);
+	scanf("%d",&q);
+	while(q--)
+	{	
+		scanf("%lld",&ti);
+		stmo=1;stri=1;stnian=-4713;f=0;
+		fnd(ti,stnian);
+		if(ansnian<0)f=1;
+		else f=0;
+		ansnian=abs(ansnian);
+		printf("%d %d %d",ansri,ansmo,ansnian);
+		if(f)printf(" BC\n");
+		else printf("\n");
+	}
+	return 0;
+}
