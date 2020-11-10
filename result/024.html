@@ -1,0 +1,293 @@
+<html>
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+        <title>JX-00024 的测评结果</title>
+    </head>
+    <body>
+        <table style="font-family:verdana" cellpadding="2" width="500">
+            <tr height="25">
+                <td style="color:#000000; background-color:#ebebeb" colspan="3">总分: 30</td>
+            </tr>
+            <tr height="25">
+                <td style="color:#ffffff; background-color:#787878" colspan="3">julian: 0</td>
+            </tr>
+            <tr height="25">
+                <td style="color:#505050; background-color:#b4b4b4" colspan="3">编译错误:
+julian.cpp: In function ‘long long int judge_year(long long int)’:
+julian.cpp:39:10: error: call of overloaded ‘abs(long long int&amp;)’ is ambiguous
+  if(abs(x)%4==0) return 366;
+          ^
+In file included from /usr/include/c++/7/cstdlib:75:0,
+                 from /usr/include/c++/7/ext/string_conversions.h:41,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from julian.cpp:1:
+/usr/include/stdlib.h:837:12: note: candidate: int abs(int)
+ extern int abs (int __x) __THROW __attribute__ ((__const__)) __wur;
+            ^~~
+julian.cpp:24:7: note: candidate: long long int abs(long long int)
+ IL LL abs(LL x)
+       ^~~
+In file included from /usr/include/c++/7/cstdlib:77:0,
+                 from /usr/include/c++/7/ext/string_conversions.h:41,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from julian.cpp:1:
+/usr/include/c++/7/bits/std_abs.h:56:3: note: candidate: long int std::abs(long int)
+   abs(long __i) { return __builtin_labs(__i); }
+   ^~~
+/usr/include/c++/7/bits/std_abs.h:61:3: note: candidate: long long int std::abs(long long int)
+   abs(long long __x) { return __builtin_llabs (__x); }
+   ^~~
+/usr/include/c++/7/bits/std_abs.h:70:3: note: candidate: constexpr double std::abs(double)
+   abs(double __x)
+   ^~~
+/usr/include/c++/7/bits/std_abs.h:74:3: note: candidate: constexpr float std::abs(float)
+   abs(float __x)
+   ^~~
+/usr/include/c++/7/bits/std_abs.h:78:3: note: candidate: constexpr long double std::abs(long double)
+   abs(long double __x)
+   ^~~
+/usr/include/c++/7/bits/std_abs.h:84:3: note: candidate: constexpr __int128 std::abs(__int128)
+   abs(__GLIBCXX_TYPE_INT_N_0 __x) { return __x >= 0 ? __x : -__x; }
+   ^~~
+/usr/include/c++/7/bits/std_abs.h:102:3: note: candidate: constexpr __float128 std::abs(__float128)
+   abs(__float128 __x)
+   ^~~
+julian.cpp: In function ‘int main()’:
+julian.cpp:117:11: error: call of overloaded ‘abs(long long int&amp;)’ is ambiguous
+   if(abs(y)%4==0) month[2]=29;
+           ^
+In file included from /usr/include/c++/7/cstdlib:75:0,
+                 from /usr/include/c++/7/ext/string_conversions.h:41,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from julian.cpp:1:
+/usr/include/stdlib.h:837:12: note: candidate: int abs(int)
+ extern int abs (int __x) __THROW __attribute__ ((__const__)) __wur;
+            ^~~
+julian.cpp:24:7: note: candidate: long long int abs(long long int)
+ IL LL abs(LL x)
+       ^~~
+In file included from /usr/include/c++/7/cstdlib:77:0,
+                 from /usr/include/c++/7/ext/string_conversions.h:41,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from julian.cpp:1:
+/usr/include/c++/7/bits/std_abs.h:56:3: note: candidate: long int std::abs(long int)
+   abs(long __i) { return __builtin_labs(__i); }
+   ^~~
+/usr/include/c++/7/bits/std_abs.h:61:3: note: candidate: long long int std::abs(long long int)
+   abs(long long __x) { return __builtin_llabs (__x); }
+   ^~~
+/usr/include/c++/7/bits/std_abs.h:70:3: note: candidate: constexpr double std::abs(double)
+   abs(double __x)
+   ^~~
+/usr/include/c++/7/bits/std_abs.h:74:3: note: candidate: constexpr float std::abs(float)
+   abs(float __x)
+   ^~~
+/usr/include/c++/7/bits/std_abs.h:78:3: note: candidate: constexpr long double std::abs(long double)
+   abs(long double __x)
+   ^~~
+/usr/include/c++/7/bits/std_abs.h:84:3: note: candidate: constexpr __int128 std::abs(__int128)
+   abs(__GLIBCXX_TYPE_INT_N_0 __x) { return __x >= 0 ? __x : -__x; }
+   ^~~
+/usr/include/c++/7/bits/std_abs.h:102:3: note: candidate: constexpr __float128 std::abs(__float128)
+   abs(__float128 __x)
+   ^~~
+julian.cpp:133:17: error: call of overloaded ‘abs(long long int&amp;)’ is ambiguous
+   if(BC) y=abs(y)+1;
+                 ^
+In file included from /usr/include/c++/7/cstdlib:75:0,
+                 from /usr/include/c++/7/ext/string_conversions.h:41,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from julian.cpp:1:
+/usr/include/stdlib.h:837:12: note: candidate: int abs(int)
+ extern int abs (int __x) __THROW __attribute__ ((__const__)) __wur;
+            ^~~
+julian.cpp:24:7: note: candidate: long long int abs(long long int)
+ IL LL abs(LL x)
+       ^~~
+In file included from /usr/include/c++/7/cstdlib:77:0,
+                 from /usr/include/c++/7/ext/string_conversions.h:41,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from julian.cpp:1:
+/usr/include/c++/7/bits/std_abs.h:56:3: note: candidate: long int std::abs(long int)
+   abs(long __i) { return __builtin_labs(__i); }
+   ^~~
+/usr/include/c++/7/bits/std_abs.h:61:3: note: candidate: long long int std::abs(long long int)
+   abs(long long __x) { return __builtin_llabs (__x); }
+   ^~~
+/usr/include/c++/7/bits/std_abs.h:70:3: note: candidate: constexpr double std::abs(double)
+   abs(double __x)
+   ^~~
+/usr/include/c++/7/bits/std_abs.h:74:3: note: candidate: constexpr float std::abs(float)
+   abs(float __x)
+   ^~~
+/usr/include/c++/7/bits/std_abs.h:78:3: note: candidate: constexpr long double std::abs(long double)
+   abs(long double __x)
+   ^~~
+/usr/include/c++/7/bits/std_abs.h:84:3: note: candidate: constexpr __int128 std::abs(__int128)
+   abs(__GLIBCXX_TYPE_INT_N_0 __x) { return __x >= 0 ? __x : -__x; }
+   ^~~
+/usr/include/c++/7/bits/std_abs.h:102:3: note: candidate: constexpr __float128 std::abs(__float128)
+   abs(__float128 __x)
+   ^~~
+</td>
+            </tr>
+            <tr height="25">
+                <td style="color:#ffffff; background-color:#787878" colspan="3">zoo: 0</td>
+            </tr>
+            <tr height="25">
+                <td style="color:#505050; background-color:#b4b4b4" colspan="3">找不到文件</td>
+            </tr>
+            <tr height="25">
+                <td style="color:#ffffff; background-color:#787878" colspan="3">call: 30</td>
+            </tr>
+            <tr height="25">
+                <td align="right" style="background-color:#ebebeb" width="25">1</td>
+                <td align="center" style="background-color:#ebebeb" rowspan="1" width="50">0</td>
+                <td style="background-color:#f67b14">第1行 标准输出:"0 0 0 0 0 0…" 选手输出:"681578389 8…"</td>
+            </tr>
+            <tr height="25">
+                <td align="right" style="background-color:#ebebeb" width="25">2</td>
+                <td align="center" style="background-color:#ebebeb" rowspan="1" width="50">0</td>
+                <td style="background-color:#f67b14">第1行 标准输出:"0 0 0 0 0 0…" 选手输出:"9259 1587 7…"</td>
+            </tr>
+            <tr height="25">
+                <td align="right" style="background-color:#ebebeb" width="25">3</td>
+                <td align="center" style="background-color:#00a1f1" rowspan="1" width="50">5</td>
+                <td style="background-color:#33b906">时间: 0.10s 内存: 66.23MB</td>
+            </tr>
+            <tr height="25">
+                <td align="right" style="background-color:#ebebeb" width="25">4</td>
+                <td align="center" style="background-color:#00a1f1" rowspan="1" width="50">5</td>
+                <td style="background-color:#33b906">时间: 0.10s 内存: 66.23MB</td>
+            </tr>
+            <tr height="25">
+                <td align="right" style="background-color:#ebebeb" width="25">5</td>
+                <td align="center" style="background-color:#ebebeb" rowspan="1" width="50">0</td>
+                <td style="background-color:#f73f3f">超过内存限制</td>
+            </tr>
+            <tr height="25">
+                <td align="right" style="background-color:#ebebeb" width="25">6</td>
+                <td align="center" style="background-color:#ebebeb" rowspan="1" width="50">0</td>
+                <td style="background-color:#f67b14">第1行 标准输出:"0 0 0 0 0 0…" 选手输出:"7671 6331 3…"</td>
+            </tr>
+            <tr height="25">
+                <td align="right" style="background-color:#ebebeb" width="25">7</td>
+                <td align="center" style="background-color:#00a1f1" rowspan="1" width="50">5</td>
+                <td style="background-color:#33b906">时间: 0.11s 内存: 66.88MB</td>
+            </tr>
+            <tr height="25">
+                <td align="right" style="background-color:#ebebeb" width="25">8</td>
+                <td align="center" style="background-color:#ebebeb" rowspan="1" width="50">0</td>
+                <td style="background-color:#f73f3f">超过内存限制</td>
+            </tr>
+            <tr height="25">
+                <td align="right" style="background-color:#ebebeb" width="25">9</td>
+                <td align="center" style="background-color:#ebebeb" rowspan="1" width="50">0</td>
+                <td style="background-color:#f67b14">第1行 标准输出:"0 0 0 0 0 0…" 选手输出:"3602 884 19…"</td>
+            </tr>
+            <tr height="25">
+                <td align="right" style="background-color:#ebebeb" width="25">10</td>
+                <td align="center" style="background-color:#00a1f1" rowspan="1" width="50">5</td>
+                <td style="background-color:#33b906">时间: 0.11s 内存: 66.88MB</td>
+            </tr>
+            <tr height="25">
+                <td align="right" style="background-color:#ebebeb" width="25">11</td>
+                <td align="center" style="background-color:#ebebeb" rowspan="1" width="50">0</td>
+                <td style="background-color:#f67b14">第1行 标准输出:"0 0 0 0 0 0…" 选手输出:"324762516 7…"</td>
+            </tr>
+            <tr height="25">
+                <td align="right" style="background-color:#ebebeb" width="25">12</td>
+                <td align="center" style="background-color:#ebebeb" rowspan="1" width="50">0</td>
+                <td style="background-color:#f73f3f">超过内存限制</td>
+            </tr>
+            <tr height="25">
+                <td align="right" style="background-color:#ebebeb" width="25">13</td>
+                <td align="center" style="background-color:#ebebeb" rowspan="1" width="50">0</td>
+                <td style="background-color:#f73f3f">超过内存限制</td>
+            </tr>
+            <tr height="25">
+                <td align="right" style="background-color:#ebebeb" width="25">14</td>
+                <td align="center" style="background-color:#00a1f1" rowspan="1" width="50">5</td>
+                <td style="background-color:#33b906">时间: 0.19s 内存: 69.32MB</td>
+            </tr>
+            <tr height="25">
+                <td align="right" style="background-color:#ebebeb" width="25">15</td>
+                <td align="center" style="background-color:#ebebeb" rowspan="1" width="50">0</td>
+                <td style="background-color:#f73f3f">超过内存限制</td>
+            </tr>
+            <tr height="25">
+                <td align="right" style="background-color:#ebebeb" width="25">16</td>
+                <td align="center" style="background-color:#00a1f1" rowspan="1" width="50">5</td>
+                <td style="background-color:#33b906">时间: 0.14s 内存: 69.32MB</td>
+            </tr>
+            <tr height="25">
+                <td align="right" style="background-color:#ebebeb" width="25">17</td>
+                <td align="center" style="background-color:#ebebeb" rowspan="1" width="50">0</td>
+                <td style="background-color:#f73f3f">超过内存限制</td>
+            </tr>
+            <tr height="25">
+                <td align="right" style="background-color:#ebebeb" width="25">18</td>
+                <td align="center" style="background-color:#ebebeb" rowspan="1" width="50">0</td>
+                <td style="background-color:#f73f3f">超过内存限制</td>
+            </tr>
+            <tr height="25">
+                <td align="right" style="background-color:#ebebeb" width="25">19</td>
+                <td align="center" style="background-color:#ebebeb" rowspan="1" width="50">0</td>
+                <td style="background-color:#f73f3f">超过内存限制</td>
+            </tr>
+            <tr height="25">
+                <td align="right" style="background-color:#ebebeb" width="25">20</td>
+                <td align="center" style="background-color:#ebebeb" rowspan="1" width="50">0</td>
+                <td style="background-color:#f73f3f">超过内存限制</td>
+            </tr>
+            <tr height="25">
+                <td style="color:#ffffff; background-color:#787878" colspan="3">snakes: 0</td>
+            </tr>
+            <tr height="25">
+                <td style="color:#505050; background-color:#b4b4b4" colspan="3">找不到文件</td>
+            </tr>
+        </table>
+        <p>本文件由 CCR Plus 测评器生成</p>
+        <p>版本: v1.1.0 (Linux 64-bit)</p>
+        <p>项目主页: <a href="https://github.com/sxyzccr/CCR-Plus">https://github.com/sxyzccr/CCR-Plus</a>
+        </p>
+        <hr size="1" align="left" color="#b4b4b4" width="500"/>
+        <p>Copyright © 2017 绍兴一中 贾越凯。保留所有权利。</p>
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<!doctype html>
+
+<html lang="zh">
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=11">
+        <title>2020 CSP-S JX 冥 间 测 评</title>
+        <link rel="stylesheet" href="https://unpkg.com/bootstrap@4.4.1/dist/css/bootstrap.min.css" crossorigin="anonymous">
+        <script src="https://unpkg.com/jquery@3.4.1/dist/jquery.min.js"></script>
+        <script src="https://unpkg.com/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://unpkg.com/bootstrap@4.4.1/dist/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    </br>
+                    <h2>2020 CSP-S JX 冥 间 测 评</h2>
+                    <hr>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">JX-00</span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="考号后三位 / 包含前导零" id="account">
+                        <div class="input-group-append">
+                          <button class="btn btn-primary" onclick="mian()">Go!</button> 
+                        </div>
+                    </div>
+                    <hr>
+                    <p>评测时采用的机器配置：Ubuntu 18.04.5 LTS 系统 / g++ 7.5.0 / CCR-Plus 软件 / Intel(R) Pentium(R) CPU G2030 @ 3.00GHz / 内存 4 GB</p>
+                    <p>本结果 <strong>仅供参考</strong>，不代表最终成绩。</p>
+                    <center>
+                        2020 <a href="https://github.com/BillZhou233/">BillZhou233</a>
+                    </center>
+                    </br>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script type="text/javascript">
+
+        function mian()
+        {
+            let account = document.getElementById("account").value;
+            if (account.length) location.href = location.href + account + ".html";
+        }
+
+    </script>
+</html>

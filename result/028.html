@@ -1,0 +1,709 @@
+<html>
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+        <title>JX-00028 的测评结果</title>
+    </head>
+    <body>
+        <table style="font-family:verdana" cellpadding="2" width="500">
+            <tr height="25">
+                <td style="color:#000000; background-color:#ebebeb" colspan="3">总分: 0</td>
+            </tr>
+            <tr height="25">
+                <td style="color:#ffffff; background-color:#787878" colspan="3">julian: 0</td>
+            </tr>
+            <tr height="25">
+                <td style="color:#505050; background-color:#b4b4b4" colspan="3">编译错误:
+julian.cpp: In function ‘int main()’:
+julian.cpp:37:10: error: ‘else’ without a previous ‘if’
+          else if(n&lt;0){
+          ^~~~
+julian.cpp: At global scope:
+julian.cpp:55:6: error: expected unqualified-id before ‘if’
+      if(n&lt;0)cout&lt;&lt;r&lt;&lt;" "&lt;&lt;y&lt;&lt;" "&lt;&lt;(n*(-1))&lt;&lt;" BC";
+      ^~
+julian.cpp:56:6: error: expected unqualified-id before ‘else’
+      else cout&lt;&lt;r&lt;&lt;" "&lt;&lt;y&lt;&lt;" "&lt;&lt;n;
+      ^~~~
+julian.cpp:57:6: error: expected unqualified-id before ‘return’
+      return 0;
+      ^~~~~~
+julian.cpp:58:1: error: expected declaration before ‘}’ token
+ }
+ ^
+</td>
+            </tr>
+            <tr height="25">
+                <td style="color:#ffffff; background-color:#787878" colspan="3">zoo: 0</td>
+            </tr>
+            <tr height="25">
+                <td style="color:#505050; background-color:#b4b4b4" colspan="3">编译错误:
+zoo.cpp:1:24: error: missing terminating > character
+ #include&lt;bits/stdc++.h.
+                        ^
+zoo.cpp:1:9: fatal error: bits/stdc++.h.: 没有那个文件或目录
+ #include&lt;bits/stdc++.h.
+         ^
+compilation terminated.
+</td>
+            </tr>
+            <tr height="25">
+                <td style="color:#ffffff; background-color:#787878" colspan="3">call: 0</td>
+            </tr>
+            <tr height="25">
+                <td style="color:#505050; background-color:#b4b4b4" colspan="3">编译错误:
+call.cpp: In function ‘int main()’:
+call.cpp:10:8: error: no match for ‘operator>’ (operand types are ‘std::istream {aka std::basic_istream&lt;char>}’ and ‘int’)
+     cin>t[a];
+     ~~~^~~~~
+call.cpp:10:8: note: candidate: operator>(int, int) &lt;built-in>
+call.cpp:10:8: note:   no known conversion for argument 1 from ‘std::istream {aka std::basic_istream&lt;char>}’ to ‘int’
+In file included from /usr/include/c++/7/regex:62:0,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:110,
+                 from call.cpp:1:
+/usr/include/c++/7/bits/regex.h:1037:5: note: candidate: template&lt;class _BiIter> bool std::__cxx11::operator>(const std::__cxx11::sub_match&lt;_BiIter>&amp;, const std::__cxx11::sub_match&lt;_BiIter>&amp;)
+     operator>(const sub_match&lt;_BiIter>&amp; __lhs, const sub_match&lt;_BiIter>&amp; __rhs)
+     ^~~~~~~~
+/usr/include/c++/7/bits/regex.h:1037:5: note:   template argument deduction/substitution failed:
+call.cpp:10:12: note:   ‘std::istream {aka std::basic_istream&lt;char>}’ is not derived from ‘const std::__cxx11::sub_match&lt;_BiIter>’
+     cin>t[a];
+            ^
+In file included from /usr/include/c++/7/regex:62:0,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:110,
+                 from call.cpp:1:
+/usr/include/c++/7/bits/regex.h:1098:5: note: candidate: template&lt;class _Bi_iter, class _Ch_traits, class _Ch_alloc> bool std::__cxx11::operator>(std::__cxx11::__sub_match_string&lt;_Bi_iter, _Ch_traits, _Ch_alloc>&amp;, const std::__cxx11::sub_match&lt;_BiIter>&amp;)
+     operator>(const __sub_match_string&lt;_Bi_iter, _Ch_traits, _Ch_alloc>&amp; __lhs,
+     ^~~~~~~~
+/usr/include/c++/7/bits/regex.h:1098:5: note:   template argument deduction/substitution failed:
+call.cpp:10:12: note:   ‘std::istream {aka std::basic_istream&lt;char>}’ is not derived from ‘std::__cxx11::__sub_match_string&lt;_Bi_iter, _Ch_traits, _Ch_alloc>’
+     cin>t[a];
+            ^
+In file included from /usr/include/c++/7/regex:62:0,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:110,
+                 from call.cpp:1:
+/usr/include/c++/7/bits/regex.h:1178:5: note: candidate: template&lt;class _Bi_iter, class _Ch_traits, class _Ch_alloc> bool std::__cxx11::operator>(const std::__cxx11::sub_match&lt;_BiIter>&amp;, std::__cxx11::__sub_match_string&lt;_Bi_iter, _Ch_traits, _Ch_alloc>&amp;)
+     operator>(const sub_match&lt;_Bi_iter>&amp; __lhs,
+     ^~~~~~~~
+/usr/include/c++/7/bits/regex.h:1178:5: note:   template argument deduction/substitution failed:
+call.cpp:10:12: note:   ‘std::istream {aka std::basic_istream&lt;char>}’ is not derived from ‘const std::__cxx11::sub_match&lt;_BiIter>’
+     cin>t[a];
+            ^
+In file included from /usr/include/c++/7/regex:62:0,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:110,
+                 from call.cpp:1:
+/usr/include/c++/7/bits/regex.h:1252:5: note: candidate: template&lt;class _Bi_iter> bool std::__cxx11::operator>(const typename std::iterator_traits&lt;_Iter>::value_type*, const std::__cxx11::sub_match&lt;_BiIter>&amp;)
+     operator>(typename iterator_traits&lt;_Bi_iter>::value_type const* __lhs,
+     ^~~~~~~~
+/usr/include/c++/7/bits/regex.h:1252:5: note:   template argument deduction/substitution failed:
+call.cpp:10:12: note:   mismatched types ‘const std::__cxx11::sub_match&lt;_BiIter>’ and ‘int’
+     cin>t[a];
+            ^
+In file included from /usr/include/c++/7/regex:62:0,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:110,
+                 from call.cpp:1:
+/usr/include/c++/7/bits/regex.h:1326:5: note: candidate: template&lt;class _Bi_iter> bool std::__cxx11::operator>(const std::__cxx11::sub_match&lt;_BiIter>&amp;, const typename std::iterator_traits&lt;_Iter>::value_type*)
+     operator>(const sub_match&lt;_Bi_iter>&amp; __lhs,
+     ^~~~~~~~
+/usr/include/c++/7/bits/regex.h:1326:5: note:   template argument deduction/substitution failed:
+call.cpp:10:12: note:   ‘std::istream {aka std::basic_istream&lt;char>}’ is not derived from ‘const std::__cxx11::sub_match&lt;_BiIter>’
+     cin>t[a];
+            ^
+In file included from /usr/include/c++/7/regex:62:0,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:110,
+                 from call.cpp:1:
+/usr/include/c++/7/bits/regex.h:1406:5: note: candidate: template&lt;class _Bi_iter> bool std::__cxx11::operator>(const typename std::iterator_traits&lt;_Iter>::value_type&amp;, const std::__cxx11::sub_match&lt;_BiIter>&amp;)
+     operator>(typename iterator_traits&lt;_Bi_iter>::value_type const&amp; __lhs,
+     ^~~~~~~~
+/usr/include/c++/7/bits/regex.h:1406:5: note:   template argument deduction/substitution failed:
+call.cpp:10:12: note:   mismatched types ‘const std::__cxx11::sub_match&lt;_BiIter>’ and ‘int’
+     cin>t[a];
+            ^
+In file included from /usr/include/c++/7/regex:62:0,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:110,
+                 from call.cpp:1:
+/usr/include/c++/7/bits/regex.h:1486:5: note: candidate: template&lt;class _Bi_iter> bool std::__cxx11::operator>(const std::__cxx11::sub_match&lt;_BiIter>&amp;, const typename std::iterator_traits&lt;_Iter>::value_type&amp;)
+     operator>(const sub_match&lt;_Bi_iter>&amp; __lhs,
+     ^~~~~~~~
+/usr/include/c++/7/bits/regex.h:1486:5: note:   template argument deduction/substitution failed:
+call.cpp:10:12: note:   ‘std::istream {aka std::basic_istream&lt;char>}’ is not derived from ‘const std::__cxx11::sub_match&lt;_BiIter>’
+     cin>t[a];
+            ^
+In file included from /usr/include/c++/7/future:39:0,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:105,
+                 from call.cpp:1:
+/usr/include/c++/7/thread:293:3: note: candidate: bool std::operator>(std::thread::id, std::thread::id)
+   operator>(thread::id __x, thread::id __y) noexcept
+   ^~~~~~~~
+/usr/include/c++/7/thread:293:3: note:   no known conversion for argument 1 from ‘std::istream {aka std::basic_istream&lt;char>}’ to ‘std::thread::id’
+In file included from /usr/include/c++/7/forward_list:38:0,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:104,
+                 from call.cpp:1:
+/usr/include/c++/7/bits/forward_list.h:1403:5: note: candidate: template&lt;class _Tp, class _Alloc> bool std::operator>(const std::forward_list&lt;_Tp, _Alloc>&amp;, const std::forward_list&lt;_Tp, _Alloc>&amp;)
+     operator>(const forward_list&lt;_Tp, _Alloc>&amp; __lx,
+     ^~~~~~~~
+/usr/include/c++/7/bits/forward_list.h:1403:5: note:   template argument deduction/substitution failed:
+call.cpp:10:12: note:   ‘std::istream {aka std::basic_istream&lt;char>}’ is not derived from ‘const std::forward_list&lt;_Tp, _Alloc>’
+     cin>t[a];
+            ^
+In file included from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:95:0,
+                 from call.cpp:1:
+/usr/include/c++/7/valarray:1187:1: note: candidate: template&lt;class _Tp> std::_Expr&lt;std::_BinClos&lt;std::__greater, std::_Constant, std::_ValArray, _Tp, _Tp>, typename std::__fun&lt;std::__greater, _Tp>::result_type> std::operator>(const _Tp&amp;, const std::valarray&lt;_Tp>&amp;)
+ _DEFINE_BINARY_OPERATOR(>, __greater)
+ ^
+/usr/include/c++/7/valarray:1187:1: note:   template argument deduction/substitution failed:
+call.cpp:10:12: note:   mismatched types ‘const std::valarray&lt;_Tp>’ and ‘int’
+     cin>t[a];
+            ^
+In file included from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:95:0,
+                 from call.cpp:1:
+/usr/include/c++/7/valarray:1187:1: note: candidate: template&lt;class _Tp> std::_Expr&lt;std::_BinClos&lt;std::__greater, std::_ValArray, std::_Constant, _Tp, _Tp>, typename std::__fun&lt;std::__greater, _Tp>::result_type> std::operator>(const std::valarray&lt;_Tp>&amp;, const _Tp&amp;)
+ _DEFINE_BINARY_OPERATOR(>, __greater)
+ ^
+/usr/include/c++/7/valarray:1187:1: note:   template argument deduction/substitution failed:
+call.cpp:10:12: note:   ‘std::istream {aka std::basic_istream&lt;char>}’ is not derived from ‘const std::valarray&lt;_Tp>’
+     cin>t[a];
+            ^
+In file included from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:95:0,
+                 from call.cpp:1:
+/usr/include/c++/7/valarray:1187:1: note: candidate: template&lt;class _Tp> std::_Expr&lt;std::_BinClos&lt;std::__greater, std::_ValArray, std::_ValArray, _Tp, _Tp>, typename std::__fun&lt;std::__greater, _Tp>::result_type> std::operator>(const std::valarray&lt;_Tp>&amp;, const std::valarray&lt;_Tp>&amp;)
+ _DEFINE_BINARY_OPERATOR(>, __greater)
+ ^
+/usr/include/c++/7/valarray:1187:1: note:   template argument deduction/substitution failed:
+call.cpp:10:12: note:   ‘std::istream {aka std::basic_istream&lt;char>}’ is not derived from ‘const std::valarray&lt;_Tp>’
+     cin>t[a];
+            ^
+In file included from /usr/include/c++/7/valarray:592:0,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:95,
+                 from call.cpp:1:
+/usr/include/c++/7/bits/valarray_after.h:417:5: note: candidate: template&lt;class _Dom> std::_Expr&lt;std::_BinClos&lt;std::__greater, std::_ValArray, std::_Expr, typename _Dom::value_type, _Dom>, typename std::__fun&lt;std::__greater, typename _Dom1::value_type>::result_type> std::operator>(const std::valarray&lt;typename _Dom::value_type>&amp;, const std::_Expr&lt;_Dom1, typename _Dom1::value_type>&amp;)
+     _DEFINE_EXPR_BINARY_OPERATOR(>, __greater)
+     ^
+/usr/include/c++/7/bits/valarray_after.h:417:5: note:   template argument deduction/substitution failed:
+call.cpp:10:12: note:   mismatched types ‘const std::_Expr&lt;_Dom1, typename _Dom1::value_type>’ and ‘int’
+     cin>t[a];
+            ^
+In file included from /usr/include/c++/7/valarray:592:0,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:95,
+                 from call.cpp:1:
+/usr/include/c++/7/bits/valarray_after.h:417:5: note: candidate: template&lt;class _Dom> std::_Expr&lt;std::_BinClos&lt;std::__greater, std::_Expr, std::_ValArray, _Dom, typename _Dom::value_type>, typename std::__fun&lt;std::__greater, typename _Dom1::value_type>::result_type> std::operator>(const std::_Expr&lt;_Dom1, typename _Dom1::value_type>&amp;, const std::valarray&lt;typename _Dom::value_type>&amp;)
+     _DEFINE_EXPR_BINARY_OPERATOR(>, __greater)
+     ^
+/usr/include/c++/7/bits/valarray_after.h:417:5: note:   template argument deduction/substitution failed:
+call.cpp:10:12: note:   ‘std::istream {aka std::basic_istream&lt;char>}’ is not derived from ‘const std::_Expr&lt;_Dom1, typename _Dom1::value_type>’
+     cin>t[a];
+            ^
+In file included from /usr/include/c++/7/valarray:592:0,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:95,
+                 from call.cpp:1:
+/usr/include/c++/7/bits/valarray_after.h:417:5: note: candidate: template&lt;class _Dom> std::_Expr&lt;std::_BinClos&lt;std::__greater, std::_Constant, std::_Expr, typename _Dom::value_type, _Dom>, typename std::__fun&lt;std::__greater, typename _Dom1::value_type>::result_type> std::operator>(const typename _Dom::value_type&amp;, const std::_Expr&lt;_Dom1, typename _Dom1::value_type>&amp;)
+     _DEFINE_EXPR_BINARY_OPERATOR(>, __greater)
+     ^
+/usr/include/c++/7/bits/valarray_after.h:417:5: note:   template argument deduction/substitution failed:
+call.cpp:10:12: note:   mismatched types ‘const std::_Expr&lt;_Dom1, typename _Dom1::value_type>’ and ‘int’
+     cin>t[a];
+            ^
+In file included from /usr/include/c++/7/valarray:592:0,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:95,
+                 from call.cpp:1:
+/usr/include/c++/7/bits/valarray_after.h:417:5: note: candidate: template&lt;class _Dom> std::_Expr&lt;std::_BinClos&lt;std::__greater, std::_Expr, std::_Constant, _Dom, typename _Dom::value_type>, typename std::__fun&lt;std::__greater, typename _Dom1::value_type>::result_type> std::operator>(const std::_Expr&lt;_Dom1, typename _Dom1::value_type>&amp;, const typename _Dom::value_type&amp;)
+     _DEFINE_EXPR_BINARY_OPERATOR(>, __greater)
+     ^
+/usr/include/c++/7/bits/valarray_after.h:417:5: note:   template argument deduction/substitution failed:
+call.cpp:10:12: note:   ‘std::istream {aka std::basic_istream&lt;char>}’ is not derived from ‘const std::_Expr&lt;_Dom1, typename _Dom1::value_type>’
+     cin>t[a];
+            ^
+In file included from /usr/include/c++/7/valarray:592:0,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:95,
+                 from call.cpp:1:
+/usr/include/c++/7/bits/valarray_after.h:417:5: note: candidate: template&lt;class _Dom1, class _Dom2> std::_Expr&lt;std::_BinClos&lt;std::__greater, std::_Expr, std::_Expr, _Dom1, _Dom2>, typename std::__fun&lt;std::__greater, typename _Dom1::value_type>::result_type> std::operator>(const std::_Expr&lt;_Dom1, typename _Dom1::value_type>&amp;, const std::_Expr&lt;_Dom2, typename _Dom2::value_type>&amp;)
+     _DEFINE_EXPR_BINARY_OPERATOR(>, __greater)
+     ^
+/usr/include/c++/7/bits/valarray_after.h:417:5: note:   template argument deduction/substitution failed:
+call.cpp:10:12: note:   ‘std::istream {aka std::basic_istream&lt;char>}’ is not derived from ‘const std::_Expr&lt;_Dom1, typename _Dom1::value_type>’
+     cin>t[a];
+            ^
+In file included from /usr/include/c++/7/stack:61:0,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:89,
+                 from call.cpp:1:
+/usr/include/c++/7/bits/stl_stack.h:323:5: note: candidate: template&lt;class _Tp, class _Seq> bool std::operator>(const std::stack&lt;_Tp, _Seq>&amp;, const std::stack&lt;_Tp, _Seq>&amp;)
+     operator>(const stack&lt;_Tp, _Seq>&amp; __x, const stack&lt;_Tp, _Seq>&amp; __y)
+     ^~~~~~~~
+/usr/include/c++/7/bits/stl_stack.h:323:5: note:   template argument deduction/substitution failed:
+call.cpp:10:12: note:   ‘std::istream {aka std::basic_istream&lt;char>}’ is not derived from ‘const std::stack&lt;_Tp, _Seq>’
+     cin>t[a];
+            ^
+In file included from /usr/include/c++/7/set:62:0,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:87,
+                 from call.cpp:1:
+/usr/include/c++/7/bits/stl_multiset.h:927:5: note: candidate: template&lt;class _Key, class _Compare, class _Alloc> bool std::operator>(const std::multiset&lt;_Key, _Compare, _Alloc>&amp;, const std::multiset&lt;_Key, _Compare, _Alloc>&amp;)
+     operator>(const multiset&lt;_Key,_Compare,_Alloc>&amp; __x,
+     ^~~~~~~~
+/usr/include/c++/7/bits/stl_multiset.h:927:5: note:   template argument deduction/substitution failed:
+call.cpp:10:12: note:   ‘std::istream {aka std::basic_istream&lt;char>}’ is not derived from ‘const std::multiset&lt;_Key, _Compare, _Alloc>’
+     cin>t[a];
+            ^
+In file included from /usr/include/c++/7/set:61:0,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:87,
+                 from call.cpp:1:
+/usr/include/c++/7/bits/stl_set.h:944:5: note: candidate: template&lt;class _Key, class _Compare, class _Alloc> bool std::operator>(const std::set&lt;_Key, _Compare, _Alloc>&amp;, const std::set&lt;_Key, _Compare, _Alloc>&amp;)
+     operator>(const set&lt;_Key, _Compare, _Alloc>&amp; __x,
+     ^~~~~~~~
+/usr/include/c++/7/bits/stl_set.h:944:5: note:   template argument deduction/substitution failed:
+call.cpp:10:12: note:   ‘std::istream {aka std::basic_istream&lt;char>}’ is not derived from ‘const std::set&lt;_Key, _Compare, _Alloc>’
+     cin>t[a];
+            ^
+In file included from /usr/include/c++/7/queue:64:0,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:86,
+                 from call.cpp:1:
+/usr/include/c++/7/bits/stl_queue.h:348:5: note: candidate: template&lt;class _Tp, class _Seq> bool std::operator>(const std::queue&lt;_Tp, _Seq>&amp;, const std::queue&lt;_Tp, _Seq>&amp;)
+     operator>(const queue&lt;_Tp, _Seq>&amp; __x, const queue&lt;_Tp, _Seq>&amp; __y)
+     ^~~~~~~~
+/usr/include/c++/7/bits/stl_queue.h:348:5: note:   template argument deduction/substitution failed:
+call.cpp:10:12: note:   ‘std::istream {aka std::basic_istream&lt;char>}’ is not derived from ‘const std::queue&lt;_Tp, _Seq>’
+     cin>t[a];
+            ^
+In file included from /usr/include/c++/7/vector:64:0,
+                 from /usr/include/c++/7/queue:61,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:86,
+                 from call.cpp:1:
+/usr/include/c++/7/bits/stl_vector.h:1631:5: note: candidate: template&lt;class _Tp, class _Alloc> bool std::operator>(const std::vector&lt;_Tp, _Alloc>&amp;, const std::vector&lt;_Tp, _Alloc>&amp;)
+     operator>(const vector&lt;_Tp, _Alloc>&amp; __x, const vector&lt;_Tp, _Alloc>&amp; __y)
+     ^~~~~~~~
+/usr/include/c++/7/bits/stl_vector.h:1631:5: note:   template argument deduction/substitution failed:
+call.cpp:10:12: note:   ‘std::istream {aka std::basic_istream&lt;char>}’ is not derived from ‘const std::vector&lt;_Tp, _Alloc>’
+     cin>t[a];
+            ^
+In file included from /usr/include/c++/7/memory:81:0,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:82,
+                 from call.cpp:1:
+/usr/include/c++/7/bits/shared_ptr.h:449:5: note: candidate: template&lt;class _Tp> bool std::operator>(std::nullptr_t, const std::shared_ptr&lt;_Tp>&amp;)
+     operator>(nullptr_t, const shared_ptr&lt;_Tp>&amp; __a) noexcept
+     ^~~~~~~~
+/usr/include/c++/7/bits/shared_ptr.h:449:5: note:   template argument deduction/substitution failed:
+call.cpp:10:12: note:   mismatched types ‘const std::shared_ptr&lt;_Tp>’ and ‘int’
+     cin>t[a];
+            ^
+In file included from /usr/include/c++/7/memory:81:0,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:82,
+                 from call.cpp:1:
+/usr/include/c++/7/bits/shared_ptr.h:444:5: note: candidate: template&lt;class _Tp> bool std::operator>(const std::shared_ptr&lt;_Tp>&amp;, std::nullptr_t)
+     operator>(const shared_ptr&lt;_Tp>&amp; __a, nullptr_t) noexcept
+     ^~~~~~~~
+/usr/include/c++/7/bits/shared_ptr.h:444:5: note:   template argument deduction/substitution failed:
+call.cpp:10:12: note:   ‘std::istream {aka std::basic_istream&lt;char>}’ is not derived from ‘const std::shared_ptr&lt;_Tp>’
+     cin>t[a];
+            ^
+In file included from /usr/include/c++/7/memory:81:0,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:82,
+                 from call.cpp:1:
+/usr/include/c++/7/bits/shared_ptr.h:439:5: note: candidate: template&lt;class _Tp, class _Up> bool std::operator>(const std::shared_ptr&lt;_Tp>&amp;, const std::shared_ptr&lt;_Up>&amp;)
+     operator>(const shared_ptr&lt;_Tp>&amp; __a, const shared_ptr&lt;_Up>&amp; __b) noexcept
+     ^~~~~~~~
+/usr/include/c++/7/bits/shared_ptr.h:439:5: note:   template argument deduction/substitution failed:
+call.cpp:10:12: note:   ‘std::istream {aka std::basic_istream&lt;char>}’ is not derived from ‘const std::shared_ptr&lt;_Tp>’
+     cin>t[a];
+            ^
+In file included from /usr/include/c++/7/bits/shared_ptr.h:52:0,
+                 from /usr/include/c++/7/memory:81,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:82,
+                 from call.cpp:1:
+/usr/include/c++/7/bits/shared_ptr_base.h:1495:5: note: candidate: template&lt;class _Tp, __gnu_cxx::_Lock_policy _Lp> bool std::operator>(std::nullptr_t, const std::__shared_ptr&lt;_Tp, _Lp>&amp;)
+     operator>(nullptr_t, const __shared_ptr&lt;_Tp, _Lp>&amp; __a) noexcept
+     ^~~~~~~~
+/usr/include/c++/7/bits/shared_ptr_base.h:1495:5: note:   template argument deduction/substitution failed:
+call.cpp:10:12: note:   mismatched types ‘const std::__shared_ptr&lt;_Tp, _Lp>’ and ‘int’
+     cin>t[a];
+            ^
+In file included from /usr/include/c++/7/bits/shared_ptr.h:52:0,
+                 from /usr/include/c++/7/memory:81,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:82,
+                 from call.cpp:1:
+/usr/include/c++/7/bits/shared_ptr_base.h:1490:5: note: candidate: template&lt;class _Tp, __gnu_cxx::_Lock_policy _Lp> bool std::operator>(const std::__shared_ptr&lt;_Tp, _Lp>&amp;, std::nullptr_t)
+     operator>(const __shared_ptr&lt;_Tp, _Lp>&amp; __a, nullptr_t) noexcept
+     ^~~~~~~~
+/usr/include/c++/7/bits/shared_ptr_base.h:1490:5: note:   template argument deduction/substitution failed:
+call.cpp:10:12: note:   ‘std::istream {aka std::basic_istream&lt;char>}’ is not derived from ‘const std::__shared_ptr&lt;_Tp, _Lp>’
+     cin>t[a];
+            ^
+In file included from /usr/include/c++/7/bits/shared_ptr.h:52:0,
+                 from /usr/include/c++/7/memory:81,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:82,
+                 from call.cpp:1:
+/usr/include/c++/7/bits/shared_ptr_base.h:1484:5: note: candidate: template&lt;class _Tp1, class _Tp2, __gnu_cxx::_Lock_policy _Lp> bool std::operator>(const std::__shared_ptr&lt;_Tp1, _Lp>&amp;, const std::__shared_ptr&lt;_Tp2, _Lp>&amp;)
+     operator>(const __shared_ptr&lt;_Tp1, _Lp>&amp; __a,
+     ^~~~~~~~
+/usr/include/c++/7/bits/shared_ptr_base.h:1484:5: note:   template argument deduction/substitution failed:
+call.cpp:10:12: note:   ‘std::istream {aka std::basic_istream&lt;char>}’ is not derived from ‘const std::__shared_ptr&lt;_Tp1, _Lp>’
+     cin>t[a];
+            ^
+In file included from /usr/include/c++/7/map:62:0,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:81,
+                 from call.cpp:1:
+/usr/include/c++/7/bits/stl_multimap.h:1090:5: note: candidate: template&lt;class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator>(const std::multimap&lt;_Key, _Tp, _Compare, _Alloc>&amp;, const std::multimap&lt;_Key, _Tp, _Compare, _Alloc>&amp;)
+     operator>(const multimap&lt;_Key, _Tp, _Compare, _Alloc>&amp; __x,
+     ^~~~~~~~
+/usr/include/c++/7/bits/stl_multimap.h:1090:5: note:   template argument deduction/substitution failed:
+call.cpp:10:12: note:   ‘std::istream {aka std::basic_istream&lt;char>}’ is not derived from ‘const std::multimap&lt;_Key, _Tp, _Compare, _Alloc>’
+     cin>t[a];
+            ^
+In file included from /usr/include/c++/7/map:61:0,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:81,
+                 from call.cpp:1:
+/usr/include/c++/7/bits/stl_map.h:1425:5: note: candidate: template&lt;class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator>(const std::map&lt;_Key, _Tp, _Compare, _Alloc>&amp;, const std::map&lt;_Key, _Tp, _Compare, _Alloc>&amp;)
+     operator>(const map&lt;_Key, _Tp, _Compare, _Alloc>&amp; __x,
+     ^~~~~~~~
+/usr/include/c++/7/bits/stl_map.h:1425:5: note:   template argument deduction/substitution failed:
+call.cpp:10:12: note:   ‘std::istream {aka std::basic_istream&lt;char>}’ is not derived from ‘const std::map&lt;_Key, _Tp, _Compare, _Alloc>’
+     cin>t[a];
+            ^
+In file included from /usr/include/c++/7/map:60:0,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:81,
+                 from call.cpp:1:
+/usr/include/c++/7/bits/stl_tree.h:1560:5: note: candidate: template&lt;class _Key, class _Val, class _KeyOfValue, class _Compare, class _Alloc> bool std::operator>(const std::_Rb_tree&lt;_Key, _Val, _KeyOfValue, _Compare, _Alloc>&amp;, const std::_Rb_tree&lt;_Key, _Val, _KeyOfValue, _Compare, _Alloc>&amp;)
+     operator>(const _Rb_tree&lt;_Key, _Val, _KeyOfValue, _Compare, _Alloc>&amp; __x,
+     ^~~~~~~~
+/usr/include/c++/7/bits/stl_tree.h:1560:5: note:   template argument deduction/substitution failed:
+call.cpp:10:12: note:   ‘std::istream {aka std::basic_istream&lt;char>}’ is not derived from ‘const std::_Rb_tree&lt;_Key, _Val, _KeyOfValue, _Compare, _Alloc>’
+     cin>t[a];
+            ^
+In file included from /usr/include/c++/7/list:63:0,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:79,
+                 from call.cpp:1:
+/usr/include/c++/7/bits/stl_list.h:1931:5: note: candidate: template&lt;class _Tp, class _Alloc> bool std::operator>(const std::__cxx11::list&lt;_Tp, _Alloc>&amp;, const std::__cxx11::list&lt;_Tp, _Alloc>&amp;)
+     operator>(const list&lt;_Tp, _Alloc>&amp; __x, const list&lt;_Tp, _Alloc>&amp; __y)
+     ^~~~~~~~
+/usr/include/c++/7/bits/stl_list.h:1931:5: note:   template argument deduction/substitution failed:
+call.cpp:10:12: note:   ‘std::istream {aka std::basic_istream&lt;char>}’ is not derived from ‘const std::__cxx11::list&lt;_Tp, _Alloc>’
+     cin>t[a];
+            ^
+In file included from /usr/include/c++/7/bits/locale_conv.h:41:0,
+                 from /usr/include/c++/7/locale:43,
+                 from /usr/include/c++/7/iomanip:43,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:72,
+                 from call.cpp:1:
+/usr/include/c++/7/bits/unique_ptr.h:766:5: note: candidate: template&lt;class _Tp, class _Dp> bool std::operator>(std::nullptr_t, const std::unique_ptr&lt;_Tp, _Dp>&amp;)
+     operator>(nullptr_t, const unique_ptr&lt;_Tp, _Dp>&amp; __x)
+     ^~~~~~~~
+/usr/include/c++/7/bits/unique_ptr.h:766:5: note:   template argument deduction/substitution failed:
+call.cpp:10:12: note:   mismatched types ‘const std::unique_ptr&lt;_Tp, _Dp>’ and ‘int’
+     cin>t[a];
+            ^
+In file included from /usr/include/c++/7/bits/locale_conv.h:41:0,
+                 from /usr/include/c++/7/locale:43,
+                 from /usr/include/c++/7/iomanip:43,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:72,
+                 from call.cpp:1:
+/usr/include/c++/7/bits/unique_ptr.h:760:5: note: candidate: template&lt;class _Tp, class _Dp> bool std::operator>(const std::unique_ptr&lt;_Tp, _Dp>&amp;, std::nullptr_t)
+     operator>(const unique_ptr&lt;_Tp, _Dp>&amp; __x, nullptr_t)
+     ^~~~~~~~
+/usr/include/c++/7/bits/unique_ptr.h:760:5: note:   template argument deduction/substitution failed:
+call.cpp:10:12: note:   ‘std::istream {aka std::basic_istream&lt;char>}’ is not derived from ‘const std::unique_ptr&lt;_Tp, _Dp>’
+     cin>t[a];
+            ^
+In file included from /usr/include/c++/7/bits/locale_conv.h:41:0,
+                 from /usr/include/c++/7/locale:43,
+                 from /usr/include/c++/7/iomanip:43,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:72,
+                 from call.cpp:1:
+/usr/include/c++/7/bits/unique_ptr.h:754:5: note: candidate: template&lt;class _Tp, class _Dp, class _Up, class _Ep> bool std::operator>(const std::unique_ptr&lt;_Tp, _Dp>&amp;, const std::unique_ptr&lt;_Up, _Ep>&amp;)
+     operator>(const unique_ptr&lt;_Tp, _Dp>&amp; __x,
+     ^~~~~~~~
+/usr/include/c++/7/bits/unique_ptr.h:754:5: note:   template argument deduction/substitution failed:
+call.cpp:10:12: note:   ‘std::istream {aka std::basic_istream&lt;char>}’ is not derived from ‘const std::unique_ptr&lt;_Tp, _Dp>’
+     cin>t[a];
+            ^
+In file included from /usr/include/c++/7/functional:54:0,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:71,
+                 from call.cpp:1:
+/usr/include/c++/7/tuple:1429:5: note: candidate: template&lt;class ... _TElements, class ... _UElements> constexpr bool std::operator>(const std::tuple&lt;_Tps ...>&amp;, const std::tuple&lt;_Elements ...>&amp;)
+     operator>(const tuple&lt;_TElements...>&amp; __t,
+     ^~~~~~~~
+/usr/include/c++/7/tuple:1429:5: note:   template argument deduction/substitution failed:
+call.cpp:10:12: note:   ‘std::istream {aka std::basic_istream&lt;char>}’ is not derived from ‘const std::tuple&lt;_Tps ...>’
+     cin>t[a];
+            ^
+In file included from /usr/include/c++/7/tuple:39:0,
+                 from /usr/include/c++/7/functional:54,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:71,
+                 from call.cpp:1:
+/usr/include/c++/7/array:270:5: note: candidate: template&lt;class _Tp, long unsigned int _Nm> bool std::operator>(const std::array&lt;_Tp, _Nm>&amp;, const std::array&lt;_Tp, _Nm>&amp;)
+     operator>(const array&lt;_Tp, _Nm>&amp; __one, const array&lt;_Tp, _Nm>&amp; __two)
+     ^~~~~~~~
+/usr/include/c++/7/array:270:5: note:   template argument deduction/substitution failed:
+call.cpp:10:12: note:   ‘std::istream {aka std::basic_istream&lt;char>}’ is not derived from ‘const std::array&lt;_Tp, _Nm>’
+     cin>t[a];
+            ^
+In file included from /usr/include/c++/7/deque:64:0,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:68,
+                 from call.cpp:1:
+/usr/include/c++/7/bits/stl_deque.h:2291:5: note: candidate: template&lt;class _Tp, class _Alloc> bool std::operator>(const std::deque&lt;_Tp, _Alloc>&amp;, const std::deque&lt;_Tp, _Alloc>&amp;)
+     operator>(const deque&lt;_Tp, _Alloc>&amp; __x,
+     ^~~~~~~~
+/usr/include/c++/7/bits/stl_deque.h:2291:5: note:   template argument deduction/substitution failed:
+call.cpp:10:12: note:   ‘std::istream {aka std::basic_istream&lt;char>}’ is not derived from ‘const std::deque&lt;_Tp, _Alloc>’
+     cin>t[a];
+            ^
+In file included from /usr/include/c++/7/deque:64:0,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:68,
+                 from call.cpp:1:
+/usr/include/c++/7/bits/stl_deque.h:315:5: note: candidate: template&lt;class _Tp, class _RefL, class _PtrL, class _RefR, class _PtrR> bool std::operator>(const std::_Deque_iterator&lt;_Tp, _Ref, _Ptr>&amp;, const std::_Deque_iterator&lt;_Tp, _RefR, _PtrR>&amp;)
+     operator>(const _Deque_iterator&lt;_Tp, _RefL, _PtrL>&amp; __x,
+     ^~~~~~~~
+/usr/include/c++/7/bits/stl_deque.h:315:5: note:   template argument deduction/substitution failed:
+call.cpp:10:12: note:   ‘std::istream {aka std::basic_istream&lt;char>}’ is not derived from ‘const std::_Deque_iterator&lt;_Tp, _Ref, _Ptr>’
+     cin>t[a];
+            ^
+In file included from /usr/include/c++/7/deque:64:0,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:68,
+                 from call.cpp:1:
+/usr/include/c++/7/bits/stl_deque.h:308:5: note: candidate: template&lt;class _Tp, class _Ref, class _Ptr> bool std::operator>(const std::_Deque_iterator&lt;_Tp, _Ref, _Ptr>&amp;, const std::_Deque_iterator&lt;_Tp, _Ref, _Ptr>&amp;)
+     operator>(const _Deque_iterator&lt;_Tp, _Ref, _Ptr>&amp; __x,
+     ^~~~~~~~
+/usr/include/c++/7/bits/stl_deque.h:308:5: note:   template argument deduction/substitution failed:
+call.cpp:10:12: note:   ‘std::istream {aka std::basic_istream&lt;char>}’ is not derived from ‘const std::_Deque_iterator&lt;_Tp, _Ref, _Ptr>’
+     cin>t[a];
+            ^
+In file included from /usr/include/c++/7/string:52:0,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/istream:38,
+                 from /usr/include/c++/7/sstream:38,
+                 from /usr/include/c++/7/complex:45,
+                 from /usr/include/c++/7/ccomplex:39,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:52,
+                 from call.cpp:1:
+/usr/include/c++/7/bits/basic_string.h:6157:5: note: candidate: template&lt;class _CharT, class _Traits, class _Alloc> bool std::operator>(const _CharT*, const std::__cxx11::basic_string&lt;_CharT, _Traits, _Alloc>&amp;)
+     operator>(const _CharT* __lhs,
+     ^~~~~~~~
+/usr/include/c++/7/bits/basic_string.h:6157:5: note:   template argument deduction/substitution failed:
+call.cpp:10:12: note:   mismatched types ‘const _CharT*’ and ‘std::basic_istream&lt;char>’
+     cin>t[a];
+            ^
+In file included from /usr/include/c++/7/string:52:0,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/istream:38,
+                 from /usr/include/c++/7/sstream:38,
+                 from /usr/include/c++/7/complex:45,
+                 from /usr/include/c++/7/ccomplex:39,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:52,
+                 from call.cpp:1:
+/usr/include/c++/7/bits/basic_string.h:6145:5: note: candidate: template&lt;class _CharT, class _Traits, class _Alloc> bool std::operator>(const std::__cxx11::basic_string&lt;_CharT, _Traits, _Alloc>&amp;, const _CharT*)
+     operator>(const basic_string&lt;_CharT, _Traits, _Alloc>&amp; __lhs,
+     ^~~~~~~~
+/usr/include/c++/7/bits/basic_string.h:6145:5: note:   template argument deduction/substitution failed:
+call.cpp:10:12: note:   ‘std::istream {aka std::basic_istream&lt;char>}’ is not derived from ‘const std::__cxx11::basic_string&lt;_CharT, _Traits, _Alloc>’
+     cin>t[a];
+            ^
+In file included from /usr/include/c++/7/string:52:0,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/istream:38,
+                 from /usr/include/c++/7/sstream:38,
+                 from /usr/include/c++/7/complex:45,
+                 from /usr/include/c++/7/ccomplex:39,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:52,
+                 from call.cpp:1:
+/usr/include/c++/7/bits/basic_string.h:6132:5: note: candidate: template&lt;class _CharT, class _Traits, class _Alloc> bool std::operator>(const std::__cxx11::basic_string&lt;_CharT, _Traits, _Alloc>&amp;, const std::__cxx11::basic_string&lt;_CharT, _Traits, _Alloc>&amp;)
+     operator>(const basic_string&lt;_CharT, _Traits, _Alloc>&amp; __lhs,
+     ^~~~~~~~
+/usr/include/c++/7/bits/basic_string.h:6132:5: note:   template argument deduction/substitution failed:
+call.cpp:10:12: note:   ‘std::istream {aka std::basic_istream&lt;char>}’ is not derived from ‘const std::__cxx11::basic_string&lt;_CharT, _Traits, _Alloc>’
+     cin>t[a];
+            ^
+In file included from /usr/include/c++/7/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/7/bits/char_traits.h:39,
+                 from /usr/include/c++/7/ios:40,
+                 from /usr/include/c++/7/istream:38,
+                 from /usr/include/c++/7/sstream:38,
+                 from /usr/include/c++/7/complex:45,
+                 from /usr/include/c++/7/ccomplex:39,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:52,
+                 from call.cpp:1:
+/usr/include/c++/7/bits/stl_iterator.h:1175:5: note: candidate: template&lt;class _Iterator> bool std::operator>(const std::move_iterator&lt;_IteratorL>&amp;, const std::move_iterator&lt;_IteratorL>&amp;)
+     operator>(const move_iterator&lt;_Iterator>&amp; __x,
+     ^~~~~~~~
+/usr/include/c++/7/bits/stl_iterator.h:1175:5: note:   template argument deduction/substitution failed:
+call.cpp:10:12: note:   ‘std::istream {aka std::basic_istream&lt;char>}’ is not derived from ‘const std::move_iterator&lt;_IteratorL>’
+     cin>t[a];
+            ^
+In file included from /usr/include/c++/7/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/7/bits/char_traits.h:39,
+                 from /usr/include/c++/7/ios:40,
+                 from /usr/include/c++/7/istream:38,
+                 from /usr/include/c++/7/sstream:38,
+                 from /usr/include/c++/7/complex:45,
+                 from /usr/include/c++/7/ccomplex:39,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:52,
+                 from call.cpp:1:
+/usr/include/c++/7/bits/stl_iterator.h:1169:5: note: candidate: template&lt;class _IteratorL, class _IteratorR> bool std::operator>(const std::move_iterator&lt;_IteratorL>&amp;, const std::move_iterator&lt;_IteratorR>&amp;)
+     operator>(const move_iterator&lt;_IteratorL>&amp; __x,
+     ^~~~~~~~
+/usr/include/c++/7/bits/stl_iterator.h:1169:5: note:   template argument deduction/substitution failed:
+call.cpp:10:12: note:   ‘std::istream {aka std::basic_istream&lt;char>}’ is not derived from ‘const std::move_iterator&lt;_IteratorL>’
+     cin>t[a];
+            ^
+In file included from /usr/include/c++/7/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/7/bits/char_traits.h:39,
+                 from /usr/include/c++/7/ios:40,
+                 from /usr/include/c++/7/istream:38,
+                 from /usr/include/c++/7/sstream:38,
+                 from /usr/include/c++/7/complex:45,
+                 from /usr/include/c++/7/ccomplex:39,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:52,
+                 from call.cpp:1:
+/usr/include/c++/7/bits/stl_iterator.h:358:5: note: candidate: template&lt;class _IteratorL, class _IteratorR> bool std::operator>(const std::reverse_iterator&lt;_Iterator>&amp;, const std::reverse_iterator&lt;_IteratorR>&amp;)
+     operator>(const reverse_iterator&lt;_IteratorL>&amp; __x,
+     ^~~~~~~~
+/usr/include/c++/7/bits/stl_iterator.h:358:5: note:   template argument deduction/substitution failed:
+call.cpp:10:12: note:   ‘std::istream {aka std::basic_istream&lt;char>}’ is not derived from ‘const std::reverse_iterator&lt;_Iterator>’
+     cin>t[a];
+            ^
+In file included from /usr/include/c++/7/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/7/bits/char_traits.h:39,
+                 from /usr/include/c++/7/ios:40,
+                 from /usr/include/c++/7/istream:38,
+                 from /usr/include/c++/7/sstream:38,
+                 from /usr/include/c++/7/complex:45,
+                 from /usr/include/c++/7/ccomplex:39,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:52,
+                 from call.cpp:1:
+/usr/include/c++/7/bits/stl_iterator.h:320:5: note: candidate: template&lt;class _Iterator> bool std::operator>(const std::reverse_iterator&lt;_Iterator>&amp;, const std::reverse_iterator&lt;_Iterator>&amp;)
+     operator>(const reverse_iterator&lt;_Iterator>&amp; __x,
+     ^~~~~~~~
+/usr/include/c++/7/bits/stl_iterator.h:320:5: note:   template argument deduction/substitution failed:
+call.cpp:10:12: note:   ‘std::istream {aka std::basic_istream&lt;char>}’ is not derived from ‘const std::reverse_iterator&lt;_Iterator>’
+     cin>t[a];
+            ^
+In file included from /usr/include/c++/7/bits/stl_algobase.h:64:0,
+                 from /usr/include/c++/7/bits/char_traits.h:39,
+                 from /usr/include/c++/7/ios:40,
+                 from /usr/include/c++/7/istream:38,
+                 from /usr/include/c++/7/sstream:38,
+                 from /usr/include/c++/7/complex:45,
+                 from /usr/include/c++/7/ccomplex:39,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:52,
+                 from call.cpp:1:
+/usr/include/c++/7/bits/stl_pair.h:467:5: note: candidate: template&lt;class _T1, class _T2> constexpr bool std::operator>(const std::pair&lt;_T1, _T2>&amp;, const std::pair&lt;_T1, _T2>&amp;)
+     operator>(const pair&lt;_T1, _T2>&amp; __x, const pair&lt;_T1, _T2>&amp; __y)
+     ^~~~~~~~
+/usr/include/c++/7/bits/stl_pair.h:467:5: note:   template argument deduction/substitution failed:
+call.cpp:10:12: note:   ‘std::istream {aka std::basic_istream&lt;char>}’ is not derived from ‘const std::pair&lt;_T1, _T2>’
+     cin>t[a];
+            ^
+</td>
+            </tr>
+            <tr height="25">
+                <td style="color:#ffffff; background-color:#787878" colspan="3">snakes: 0</td>
+            </tr>
+            <tr height="25">
+                <td align="right" style="background-color:#ebebeb" width="25">1</td>
+                <td align="center" style="background-color:#ebebeb" rowspan="1" width="50">0</td>
+                <td style="background-color:#f67b14">第1行 标准输出:"3" 选手输出:"1804289383"</td>
+            </tr>
+            <tr height="25">
+                <td align="right" style="background-color:#ebebeb" width="25">2</td>
+                <td align="center" style="background-color:#ebebeb" rowspan="1" width="50">0</td>
+                <td style="background-color:#f67b14">第1行 标准输出:"1" 选手输出:"1804289383"</td>
+            </tr>
+            <tr height="25">
+                <td align="right" style="background-color:#ebebeb" width="25">3</td>
+                <td align="center" style="background-color:#ebebeb" rowspan="1" width="50">0</td>
+                <td style="background-color:#f67b14">第1行 标准输出:"1" 选手输出:"1804289383"</td>
+            </tr>
+            <tr height="25">
+                <td align="right" style="background-color:#ebebeb" width="25">4</td>
+                <td align="center" style="background-color:#ebebeb" rowspan="1" width="50">0</td>
+                <td style="background-color:#f67b14">第1行 标准输出:"3" 选手输出:"1804289383"</td>
+            </tr>
+            <tr height="25">
+                <td align="right" style="background-color:#ebebeb" width="25">5</td>
+                <td align="center" style="background-color:#ebebeb" rowspan="1" width="50">0</td>
+                <td style="background-color:#f67b14">第1行 标准输出:"7" 选手输出:"1804289383"</td>
+            </tr>
+            <tr height="25">
+                <td align="right" style="background-color:#ebebeb" width="25">6</td>
+                <td align="center" style="background-color:#ebebeb" rowspan="1" width="50">0</td>
+                <td style="background-color:#f67b14">第1行 标准输出:"5" 选手输出:"1804289383"</td>
+            </tr>
+            <tr height="25">
+                <td align="right" style="background-color:#ebebeb" width="25">7</td>
+                <td align="center" style="background-color:#ebebeb" rowspan="1" width="50">0</td>
+                <td style="background-color:#f67b14">第1行 标准输出:"7" 选手输出:"1804289383"</td>
+            </tr>
+            <tr height="25">
+                <td align="right" style="background-color:#ebebeb" width="25">8</td>
+                <td align="center" style="background-color:#ebebeb" rowspan="1" width="50">0</td>
+                <td style="background-color:#f67b14">第1行 标准输出:"5" 选手输出:"1804289383"</td>
+            </tr>
+            <tr height="25">
+                <td align="right" style="background-color:#ebebeb" width="25">9</td>
+                <td align="center" style="background-color:#ebebeb" rowspan="1" width="50">0</td>
+                <td style="background-color:#f73f3f">运行时错误: 段错误</td>
+            </tr>
+            <tr height="25">
+                <td align="right" style="background-color:#ebebeb" width="25">10</td>
+                <td align="center" style="background-color:#ebebeb" rowspan="1" width="50">0</td>
+                <td style="background-color:#f73f3f">运行时错误: 段错误</td>
+            </tr>
+            <tr height="25">
+                <td align="right" style="background-color:#ebebeb" width="25">11</td>
+                <td align="center" style="background-color:#ebebeb" rowspan="1" width="50">0</td>
+                <td style="background-color:#f73f3f">运行时错误: 段错误</td>
+            </tr>
+            <tr height="25">
+                <td align="right" style="background-color:#ebebeb" width="25">12</td>
+                <td align="center" style="background-color:#ebebeb" rowspan="1" width="50">0</td>
+                <td style="background-color:#f73f3f">运行时错误: 段错误</td>
+            </tr>
+            <tr height="25">
+                <td align="right" style="background-color:#ebebeb" width="25">13</td>
+                <td align="center" style="background-color:#ebebeb" rowspan="1" width="50">0</td>
+                <td style="background-color:#f73f3f">运行时错误: 段错误</td>
+            </tr>
+            <tr height="25">
+                <td align="right" style="background-color:#ebebeb" width="25">14</td>
+                <td align="center" style="background-color:#ebebeb" rowspan="1" width="50">0</td>
+                <td style="background-color:#f73f3f">运行时错误: 段错误</td>
+            </tr>
+            <tr height="25">
+                <td align="right" style="background-color:#ebebeb" width="25">15</td>
+                <td align="center" style="background-color:#ebebeb" rowspan="1" width="50">0</td>
+                <td style="background-color:#f73f3f">运行时错误: 段错误</td>
+            </tr>
+            <tr height="25">
+                <td align="right" style="background-color:#ebebeb" width="25">16</td>
+                <td align="center" style="background-color:#ebebeb" rowspan="1" width="50">0</td>
+                <td style="background-color:#f73f3f">运行时错误: 段错误</td>
+            </tr>
+            <tr height="25">
+                <td align="right" style="background-color:#ebebeb" width="25">17</td>
+                <td align="center" style="background-color:#ebebeb" rowspan="1" width="50">0</td>
+                <td style="background-color:#f73f3f">运行时错误: 段错误</td>
+            </tr>
+            <tr height="25">
+                <td align="right" style="background-color:#ebebeb" width="25">18</td>
+                <td align="center" style="background-color:#ebebeb" rowspan="1" width="50">0</td>
+                <td style="background-color:#f73f3f">运行时错误: 段错误</td>
+            </tr>
+            <tr height="25">
+                <td align="right" style="background-color:#ebebeb" width="25">19</td>
+                <td align="center" style="background-color:#ebebeb" rowspan="1" width="50">0</td>
+                <td style="background-color:#f73f3f">运行时错误: 段错误</td>
+            </tr>
+            <tr height="25">
+                <td align="right" style="background-color:#ebebeb" width="25">20</td>
+                <td align="center" style="background-color:#ebebeb" rowspan="1" width="50">0</td>
+                <td style="background-color:#f73f3f">运行时错误: 段错误</td>
+            </tr>
+        </table>
+        <p>本文件由 CCR Plus 测评器生成</p>
+        <p>版本: v1.1.0 (Linux 64-bit)</p>
+        <p>项目主页: <a href="https://github.com/sxyzccr/CCR-Plus">https://github.com/sxyzccr/CCR-Plus</a>
+        </p>
+        <hr size="1" align="left" color="#b4b4b4" width="500"/>
+        <p>Copyright © 2017 绍兴一中 贾越凯。保留所有权利。</p>
+    </body>
+</html>

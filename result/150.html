@@ -1,0 +1,128 @@
+<html>
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+        <title>JX-00150 的测评结果</title>
+    </head>
+    <body>
+        <table style="font-family:verdana" cellpadding="2" width="500">
+            <tr height="25">
+                <td style="color:#000000; background-color:#ebebeb" colspan="3">总分: 0</td>
+            </tr>
+            <tr height="25">
+                <td style="color:#ffffff; background-color:#787878" colspan="3">julian: 0</td>
+            </tr>
+            <tr height="25">
+                <td style="color:#505050; background-color:#b4b4b4" colspan="3">编译错误:
+julian.cpp:3:1: error: expected ‘;’ before ‘int’
+ int a[100001],y1[100001],m[100001],d[100001],y2[100001];
+ ^~~
+julian.cpp:3:24: error: ‘int y1 [100001]’ redeclared as different kind of symbol
+ int a[100001],y1[100001],m[100001],d[100001],y2[100001];
+                        ^
+In file included from /usr/include/features.h:424:0,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/os_defines.h:39,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/c++config.h:533,
+                 from /usr/include/c++/7/cassert:43,
+                 from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:33,
+                 from julian.cpp:1:
+/usr/include/x86_64-linux-gnu/bits/mathcalls.h:221:1: note: previous declaration ‘double y1(double)’
+ __MATHCALL (y1,, (_Mdouble_));
+ ^
+julian.cpp: In function ‘int main()’:
+julian.cpp:13:14: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+          y1[i]=4713;
+              ^
+julian.cpp:13:16: error: assignment of read-only location ‘*(y1 + ((sizetype)i))’
+          y1[i]=4713;
+                ^~~~
+julian.cpp:13:16: error: cannot convert ‘int’ to ‘double(double) throw ()’ in assignment
+julian.cpp:34:40: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+              if(m[i]==2&amp;&amp;d[i]==28&amp;&amp;y1[i]%4!=1&amp;&amp;y1[i]>0)
+                                        ^
+julian.cpp:34:41: error: invalid operands of types ‘double(double) throw ()’ and ‘int’ to binary ‘operator%’
+              if(m[i]==2&amp;&amp;d[i]==28&amp;&amp;y1[i]%4!=1&amp;&amp;y1[i]>0)
+                                    ~~~~~^~
+julian.cpp:34:52: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+              if(m[i]==2&amp;&amp;d[i]==28&amp;&amp;y1[i]%4!=1&amp;&amp;y1[i]>0)
+                                                    ^
+julian.cpp:39:40: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+              if(m[i]==2&amp;&amp;d[i]==29&amp;&amp;y1[i]%4==1&amp;&amp;y1[i]>0)
+                                        ^
+julian.cpp:39:41: error: invalid operands of types ‘double(double) throw ()’ and ‘int’ to binary ‘operator%’
+              if(m[i]==2&amp;&amp;d[i]==29&amp;&amp;y1[i]%4==1&amp;&amp;y1[i]>0)
+                                    ~~~~~^~
+julian.cpp:39:52: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+              if(m[i]==2&amp;&amp;d[i]==29&amp;&amp;y1[i]%4==1&amp;&amp;y1[i]>0)
+                                                    ^
+julian.cpp:44:52: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+              if(m[i]==2&amp;&amp;d[i]==28&amp;&amp;y2[i]%4!=0&amp;&amp;y1[i]&lt;0)
+                                                    ^
+julian.cpp:49:52: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+              if(m[i]==2&amp;&amp;d[i]==29&amp;&amp;y2[i]%4==0&amp;&amp;y1[i]&lt;0)
+                                                    ^
+julian.cpp:56:22: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+                  y1[i]--;
+                      ^
+julian.cpp:56:23: warning: ISO C++ forbids decrementing a pointer of type ‘double (*)(double) throw ()’ [-Wpointer-arith]
+                  y1[i]--;
+                       ^~
+julian.cpp:56:23: error: lvalue required as decrement operand
+julian.cpp:62:21: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+              if(y1[i]&lt;=0)
+                     ^
+julian.cpp:64:31: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+                  y2[i]=(1-y1[i]);
+                               ^
+julian.cpp:64:26: error: invalid operands of types ‘int’ and ‘double(double) throw ()’ to binary ‘operator-’
+                  y2[i]=(1-y1[i]);
+                         ~^~~~~~
+julian.cpp:67:17: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+          if(y1[i]&lt;0)
+                 ^
+julian.cpp:71:17: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+          if(y1[i]>0)
+                 ^
+julian.cpp:73:46: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+              cout&lt;&lt;d[i]&lt;&lt;" "&lt;&lt;m[i]&lt;&lt;" "&lt;&lt;y1[i]&lt;&lt;" "&lt;&lt;"BC";
+                                              ^
+</td>
+            </tr>
+            <tr height="25">
+                <td style="color:#ffffff; background-color:#787878" colspan="3">zoo: 0</td>
+            </tr>
+            <tr height="25">
+                <td style="color:#505050; background-color:#b4b4b4" colspan="3">编译错误:
+zoo.cpp:3:1: error: expected ‘;’ before ‘int’
+ int n,m,c,k,ans=1;
+ ^~~
+zoo.cpp: In function ‘int main()’:
+zoo.cpp:17:120: error: lvalue required as left operand of assignment
+          if(n==3&amp;&amp;m==3&amp;&amp;c==5&amp;&amp;k==4&amp;&amp;a[1]==1&amp;&amp;a[2]==4&amp;&amp;a[3]==6&amp;&amp;pi[1]==0&amp;&amp;pi[2]==2&amp;&amp;pi[3]==2&amp;&amp;qi[1]==3&amp;&amp;qi[2]==4&amp;&amp;qi[3]=5)
+                                                                                                                        ^
+</td>
+            </tr>
+            <tr height="25">
+                <td style="color:#ffffff; background-color:#787878" colspan="3">call: 0</td>
+            </tr>
+            <tr height="25">
+                <td style="color:#505050; background-color:#b4b4b4" colspan="3">找不到文件</td>
+            </tr>
+            <tr height="25">
+                <td style="color:#ffffff; background-color:#787878" colspan="3">snakes: 0</td>
+            </tr>
+            <tr height="25">
+                <td style="color:#505050; background-color:#b4b4b4" colspan="3">编译错误:
+snakes.cpp:3:1: error: expected ‘;’ before ‘int’
+ int a[100001],sum[100001];
+ ^~~
+</td>
+            </tr>
+        </table>
+        <p>本文件由 CCR Plus 测评器生成</p>
+        <p>版本: v1.1.0 (Linux 64-bit)</p>
+        <p>项目主页: <a href="https://github.com/sxyzccr/CCR-Plus">https://github.com/sxyzccr/CCR-Plus</a>
+        </p>
+        <hr size="1" align="left" color="#b4b4b4" width="500"/>
+        <p>Copyright © 2017 绍兴一中 贾越凯。保留所有权利。</p>
+    </body>
+</html>
